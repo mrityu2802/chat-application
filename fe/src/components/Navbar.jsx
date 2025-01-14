@@ -6,11 +6,11 @@ const Navbar = () => {
 
   return (
     <div>
-      <Link to={"/"}>home</Link>
+      {/* <Link to={"/"}>home</Link>
       <Link to={"/login"}>login</Link>
       <Link to={"/settings"}>settings</Link>
       <Link to={"/"}>home</Link>
-      <Link to={"/"}>home</Link>
+      <Link to={"/"}>home</Link> */}
     </div>
   );
 };
