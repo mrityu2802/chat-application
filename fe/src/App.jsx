@@ -12,9 +12,11 @@ import { Toaster } from "react-hot-toast";
 
 const App = () => {
   const { authUser, checkAuth, isCheckingAuth } = useAuthStore();
+
   useEffect(() => {
     checkAuth();
   }, [checkAuth]);
+
   console.log(authUser);
   if (isCheckingAuth && !authUser) {
     return (
@@ -32,7 +34,10 @@ const App = () => {
           path="/"
           element={authUser ? <HomePage /> : <Navigate to={"/login"} />}
         />
-        <Route path="/signup" element={<SignUpPage />} />
+        <Route
+          path="/signup"
+          element={!authUser ? <SignUpPage /> : <Navigate to={"/"} />}
+        />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/settings" element={<SettingsPage />} />
         <Route
