@@ -34,7 +34,7 @@ const SignUpPage = () => {
 
     return true;
   };
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
 
     const success = validateForm();
